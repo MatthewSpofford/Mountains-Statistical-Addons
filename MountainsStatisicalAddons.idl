@@ -1,0 +1,51 @@
+// Mountains-Statisical-Addons.idl : type library source for ActiveX Control project.
+
+// This file will be processed by the MIDL compiler tool to
+// produce the type library (Mountains-Statisical-Addons.tlb) that will become a resource in
+// Mountains-Statisical-Addons.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(647044bd-dec7-4ec2-b786-7871a1f6d631), version(1.0),
+  control ]
+library MountainsStatisicalAddonsLib
+{
+	importlib(STDOLE_TLB);
+
+	//  Primary dispatch interface for CMountainsStatisicalAddonsCtrl
+	[ 
+		uuid(c8d88fe4-1860-4add-88dc-393a78677722)
+	]
+	dispinterface _DMountainsStatisicalAddons
+	{
+		properties:
+		methods:
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CMountainsStatisicalAddonsCtrl
+
+	[ 
+		uuid(0a210d0d-2836-499f-b91a-3cc8e60b35e0)
+	]
+	dispinterface _DMountainsStatisicalAddonsEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+	};
+
+	//  Class information for CMountainsStatisicalAddonsCtrl
+	[
+		uuid(1b777728-f285-4da8-81af-0777f97b6d51), licensed
+	]
+	coclass MountainsStatisicalAddons
+	{
+		[default] dispinterface _DMountainsStatisicalAddons;
+		[default, source] dispinterface _DMountainsStatisicalAddonsEvents;
+	};
+
+};
