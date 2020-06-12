@@ -92,8 +92,8 @@ BOOL CMountainsStatisicalAddonsCtrl::CMountainsStatisicalAddonsCtrlFactory::Upda
 
 // Licensing strings
 
-static const TCHAR _szLicFileName[] = _T("Mountains-Statisical-Addons.lic");
-static const WCHAR _szLicString[] = L"Copyright (c) 2020 ";
+static const TCHAR _szLicFileName[] = _T("LICENSE");
+static const WCHAR _szLicString[] = L"MIT License";
 
 // CMountainsStatisicalAddonsCtrl::CMountainsStatisicalAddonsCtrlFactory::VerifyUserLicense -
 // Checks for existence of a user license

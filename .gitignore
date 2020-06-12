@@ -130,3 +130,5 @@ dmypy.json
 
 # VS Project Files
 .vs/
+Debug/
+CppProperties.json

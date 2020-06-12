@@ -29,15 +29,15 @@ win32com.client.gencache.EnsureModule(ActiveXStudyLIBID, VERSION_MAJOR, VERSION_
 # Defines the type as a Study (Reserve)
 type = constants.kAddonReserve
 # Name of study and various langauges
-publicname = {constants.kDefaultLanguage : "Statistical F-Test",
-              constants.kLangEnglish : "Statistical F-Test",
-              constants.kLangFrench : "Test statistique F"}
+publicname = {constants.kDefaultLanguage : "Statistical Addon",
+              constants.kLangEnglish : "Statistical Addon",
+              constants.kLangFrench : "Module statistique"}
 # The type of studiable accepted as input
 input_type = { constants.kDSStudiableProfile,
 			   constants.kDSStudiableSurface }
 
 # Icon location
-icon_path = ".ico"
+icon_path = "Mountains-Statisical-Addons.ico"
 
 # Class to define group on ribbon tab
 class group_infos(object):
@@ -57,18 +57,18 @@ class version_infos :
     version = '0.1.0'
     company = "Worcester Polytechnic Institute, USA"
   
-    description = { constants.kDefaultLanguage : "Statistical F-Test to be run on a given surface.",
-                    constants.kLangEnglish : "Statistical F-Test to be run on a given surface."}
+    description = { constants.kDefaultLanguage : "Statistical addon to be run on a given surface.",
+                    constants.kLangEnglish : "Statistical addon to be run on a given surface."}
 
-    comment = "More information can be found at the GitHub page."
-    support = 'https://github.com/MatthewSpofford'
+    comment = "More information can be found at the software's GitHub page."
+    support = 'https://github.com/MatthewSpofford/Mountains-Statistical-Addons'
 
-def CreateAddon() -> FTestStudy :
+def CreateAddon() -> StatisticalAddonStudies :
     """Creates the F-test study addon to be used by mountains"""
-    return FTestStudy()
+    return StatisticalAddonStudies()
 
 
-class FTestStudy :
+class StatisticalAddonStudies :
     """Container for Study (Reserve) object"""
     def __init__(self) :
         self.scale_min = 0
