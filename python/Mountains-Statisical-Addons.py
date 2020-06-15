@@ -12,8 +12,7 @@ from imountains import constants, IStudiable
 import mountains
 
 # imports the module used to handle COM components
-from win32com.client import Dispatch
-from pywintypes import IID
+import win32com.client
 
 # Version values, represented as MAJOR.MINOR.SUB
 #   Ex: MAJOR = 1, MINOR = 2, SUB = 3

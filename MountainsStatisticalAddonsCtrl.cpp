@@ -14,19 +14,20 @@
 IMPLEMENT_DYNCREATE(CMountainsStatisticalAddonsCtrl, COleControl)
 
 // Message map
-
 BEGIN_MESSAGE_MAP(CMountainsStatisticalAddonsCtrl, COleControl)
 	ON_OLEVERB(AFX_IDS_VERB_PROPERTIES, OnProperties)
 END_MESSAGE_MAP()
 
 // Dispatch map
-
 BEGIN_DISPATCH_MAP(CMountainsStatisticalAddonsCtrl, COleControl)
 	DISP_FUNCTION_ID(CMountainsStatisticalAddonsCtrl, "AboutBox", DISPID_ABOUTBOX, AboutBox, VT_EMPTY, VTS_NONE)
+	DISP_FUNCTION_ID(CMountainsStatisticalAddonsCtrl, "OnInit", 1, OnInit, VT_EMPTY, VTS_DISPATCH VTS_DISPATCH VTS_DISPATCH)
+	DISP_PROPERTY_EX_ID(CMountainsStatisticalAddonsCtrl, "UnitSystem", 2, GetUnitSystem, SetUnitSystem, VT_I2)
+	DISP_FUNCTION_ID(CMountainsStatisticalAddonsCtrl, "OnButtonClick", 3, OnButtonClick, VT_EMPTY, VTS_BSTR VTS_BOOL VTS_PBOOL)
+	DISP_FUNCTION_ID(CMountainsStatisticalAddonsCtrl, "OnUpdateButton", 4, OnUpdateButton, VT_EMPTY, VTS_BSTR VTS_PBOOL VTS_PBOOL VTS_PBOOL)
 END_DISPATCH_MAP()
 
 // Event map
-
 BEGIN_EVENT_MAP(CMountainsStatisticalAddonsCtrl, COleControl)
 END_EVENT_MAP()
 
@@ -38,21 +39,17 @@ BEGIN_PROPPAGEIDS(CMountainsStatisticalAddonsCtrl, 1)
 END_PROPPAGEIDS(CMountainsStatisticalAddonsCtrl)
 
 // Initialize class factory and guid
-
 IMPLEMENT_OLECREATE_EX(CMountainsStatisticalAddonsCtrl, "MFCACTIVEXCONTRO.MountainsStatisticalAddonsCtrl.1",
 	0x1b777728,0xf285,0x4da8,0x81,0xaf,0x07,0x77,0xf9,0x7b,0x6d,0x51)
 
 // Type library ID and version
-
 IMPLEMENT_OLETYPELIB(CMountainsStatisticalAddonsCtrl, _tlid, _wVerMajor, _wVerMinor)
 
 // Interface IDs
-
 const IID IID_DMountainsStatisicalAddons = {0xc8d88fe4,0x1860,0x4add,{0x88,0xdc,0x39,0x3a,0x78,0x67,0x77,0x22}};
 const IID IID_DMountainsStatisicalAddonsEvents = {0x0a210d0d,0x2836,0x499f,{0xb9,0x1a,0x3c,0xc8,0xe6,0x0b,0x35,0xe0}};
 
 // Control type information
-
 static const DWORD _dwMountainsStatisticalAddonsOleMisc =
 	OLEMISC_ACTIVATEWHENVISIBLE |
 	OLEMISC_SETCLIENTSITEFIRST |
@@ -64,7 +61,6 @@ IMPLEMENT_OLECTLTYPE(CMountainsStatisticalAddonsCtrl, IDS_MOUNTAINSSTATISTICALAD
 
 // CMountainsStatisicalAddonsCtrl::CMountainsStatisicalAddonsCtrlFactory::UpdateRegistry -
 // Adds or removes system registry entries for CMountainsStatisticalAddonsCtrl
-
 BOOL CMountainsStatisticalAddonsCtrl::CMountainsStatisticalAddonsCtrlFactory::UpdateRegistry(BOOL bRegister)
 {
 	// TODO: Verify that your control follows apartment-model threading rules.
@@ -72,7 +68,6 @@ BOOL CMountainsStatisticalAddonsCtrl::CMountainsStatisticalAddonsCtrlFactory::Up
 	// If your control does not conform to the apartment-model rules, then
 	// you must modify the code below, changing the 6th parameter from
 	// afxRegApartmentThreading to 0.
-
 	if (bRegister)
 		return AfxOleRegisterControlClass(
 			AfxGetInstanceHandle(),
@@ -176,4 +171,41 @@ void CMountainsStatisticalAddonsCtrl::AboutBox()
 }
 
 
-// CMountainsStatisicalAddonsCtrl message handlers
+void CMountainsStatisticalAddonsCtrl::OnInit(
+	IDispatch* dispMountains,
+	IDispatch* studiables,
+	IDispatch* parameterHandler) {
+
+	AFX_MANAGE_STATE(AfxGetStaticModuleState());
+
+	this->mountains = dispMountains;
+	this->studiables = studiables;
+	this->paramHandler = parameterHandler;
+}
+
+void CMountainsStatisticalAddonsCtrl::OnButtonClick(LPCTSTR id, BOOL ehecked, BOOL* modified) {
+	spy->WriteText("ADDON: Button has beeen clicked!");
+}
+
+void CMountainsStatisticalAddonsCtrl::OnUpdateButton(
+	LPCTSTR id,
+	BOOL* enable,
+	BOOL* checked,
+	BOOL* activeOnMultiSelection) {
+
+}
+
+SHORT CMountainsStatisticalAddonsCtrl::GetUnitSystem() {
+	return unitSystem;
+}
+
+void CMountainsStatisticalAddonsCtrl::SetUnitSystem(SHORT value) {
+	unitSystem = value;
+
+	InvalidateControl();
+	SetModifiedFlag();
+}
+
+void CMountainsStatisticalAddonsCtrl::Serialize(CArchive& ar) {
+	__super::Serialize(ar);
+}
