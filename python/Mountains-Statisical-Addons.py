@@ -37,7 +37,7 @@ input_type = { constants.kDSStudiableProfile,
 			   constants.kDSStudiableSurface }
 
 # Icon location
-icon_path = "Mountains-Statisical-Addons.ico"
+icon_path = "Mountains-Statistical-Addons.ico"
 
 # Class to define group on ribbon tab
 class group_infos(object):
@@ -71,18 +71,13 @@ def CreateAddon() -> StatisticalAddonStudies :
 class StatisticalAddonStudies :
     """Container for Study (Reserve) object"""
     def __init__(self) :
-        self.scale_min = 0
-        self.scale_max = 0
-        self.alpha = 0.05
-        self.max_f = 0.95
-        # group_1 = IStudiables...
-        # group_2 = IStudiables...
+        return
 
     def GetCLSID(self) :
         """This method is called by Mountains to obtain the CLSID of the ActiveX to create."""
 
         # Python ActiveX study sample control
-        return "{4848D679-6AE2-4FEC-889C-9E67910366F0}"
+        return "{1B777728-F285-4DA8-81AF-0777F97B6D51}"
 
     def OnInit(self, studiable: IStudiable,
                 paramhandler: imountains.IAddonParameterHandler, 

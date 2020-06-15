@@ -1,8 +1,8 @@
-// Mountains-Statisical-Addons.cpp : Implementation of CMountainsStatisicalAddonsApp and DLL registration.
+// Mountains-Statistical-Addons.cpp : Implementation of CMountainsStatisicalAddonsApp and DLL registration.
 
 #include "pch.h"
 #include "framework.h"
-#include "Mountains-Statisical-Addons.h"
+#include "Mountains-Statistical-Addons.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW

@@ -1,50 +1,50 @@
-// MountainsStatisicalAddonsCtrl.cpp : Implementation of the CMountainsStatisicalAddonsCtrl ActiveX Control class.
+// MountainsStatisticalAddonsCtrl.cpp : Implementation of the CMountainsStatisicalAddonsCtrl ActiveX Control class.
 
 #include "pch.h"
 #include "framework.h"
-#include "Mountains-Statisical-Addons.h"
-#include "MountainsStatisicalAddonsCtrl.h"
-#include "MountainsStatisicalAddonsPropPage.h"
+#include "Mountains-Statistical-Addons.h"
+#include "MountainsStatisticalAddonsCtrl.h"
+#include "MountainsStatisticalAddonsPropPage.h"
 #include "afxdialogex.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
-IMPLEMENT_DYNCREATE(CMountainsStatisicalAddonsCtrl, COleControl)
+IMPLEMENT_DYNCREATE(CMountainsStatisticalAddonsCtrl, COleControl)
 
 // Message map
 
-BEGIN_MESSAGE_MAP(CMountainsStatisicalAddonsCtrl, COleControl)
+BEGIN_MESSAGE_MAP(CMountainsStatisticalAddonsCtrl, COleControl)
 	ON_OLEVERB(AFX_IDS_VERB_PROPERTIES, OnProperties)
 END_MESSAGE_MAP()
 
 // Dispatch map
 
-BEGIN_DISPATCH_MAP(CMountainsStatisicalAddonsCtrl, COleControl)
-	DISP_FUNCTION_ID(CMountainsStatisicalAddonsCtrl, "AboutBox", DISPID_ABOUTBOX, AboutBox, VT_EMPTY, VTS_NONE)
+BEGIN_DISPATCH_MAP(CMountainsStatisticalAddonsCtrl, COleControl)
+	DISP_FUNCTION_ID(CMountainsStatisticalAddonsCtrl, "AboutBox", DISPID_ABOUTBOX, AboutBox, VT_EMPTY, VTS_NONE)
 END_DISPATCH_MAP()
 
 // Event map
 
-BEGIN_EVENT_MAP(CMountainsStatisicalAddonsCtrl, COleControl)
+BEGIN_EVENT_MAP(CMountainsStatisticalAddonsCtrl, COleControl)
 END_EVENT_MAP()
 
 // Property pages
 
 // TODO: Add more property pages as needed.  Remember to increase the count!
-BEGIN_PROPPAGEIDS(CMountainsStatisicalAddonsCtrl, 1)
-	PROPPAGEID(CMountainsStatisicalAddonsPropPage::guid)
-END_PROPPAGEIDS(CMountainsStatisicalAddonsCtrl)
+BEGIN_PROPPAGEIDS(CMountainsStatisticalAddonsCtrl, 1)
+	PROPPAGEID(CMountainsStatisticalAddonsPropPage::guid)
+END_PROPPAGEIDS(CMountainsStatisticalAddonsCtrl)
 
 // Initialize class factory and guid
 
-IMPLEMENT_OLECREATE_EX(CMountainsStatisicalAddonsCtrl, "MFCACTIVEXCONTRO.MountainsStatisicalAddonsCtrl.1",
+IMPLEMENT_OLECREATE_EX(CMountainsStatisticalAddonsCtrl, "MFCACTIVEXCONTRO.MountainsStatisticalAddonsCtrl.1",
 	0x1b777728,0xf285,0x4da8,0x81,0xaf,0x07,0x77,0xf9,0x7b,0x6d,0x51)
 
 // Type library ID and version
 
-IMPLEMENT_OLETYPELIB(CMountainsStatisicalAddonsCtrl, _tlid, _wVerMajor, _wVerMinor)
+IMPLEMENT_OLETYPELIB(CMountainsStatisticalAddonsCtrl, _tlid, _wVerMajor, _wVerMinor)
 
 // Interface IDs
 
@@ -53,19 +53,19 @@ const IID IID_DMountainsStatisicalAddonsEvents = {0x0a210d0d,0x2836,0x499f,{0xb9
 
 // Control type information
 
-static const DWORD _dwMountainsStatisicalAddonsOleMisc =
+static const DWORD _dwMountainsStatisticalAddonsOleMisc =
 	OLEMISC_ACTIVATEWHENVISIBLE |
 	OLEMISC_SETCLIENTSITEFIRST |
 	OLEMISC_INSIDEOUT |
 	OLEMISC_CANTLINKINSIDE |
 	OLEMISC_RECOMPOSEONRESIZE;
 
-IMPLEMENT_OLECTLTYPE(CMountainsStatisicalAddonsCtrl, IDS_MOUNTAINSSTATISICALADDONS, _dwMountainsStatisicalAddonsOleMisc)
+IMPLEMENT_OLECTLTYPE(CMountainsStatisticalAddonsCtrl, IDS_MOUNTAINSSTATISTICALADDONS, _dwMountainsStatisticalAddonsOleMisc)
 
 // CMountainsStatisicalAddonsCtrl::CMountainsStatisicalAddonsCtrlFactory::UpdateRegistry -
-// Adds or removes system registry entries for CMountainsStatisicalAddonsCtrl
+// Adds or removes system registry entries for CMountainsStatisticalAddonsCtrl
 
-BOOL CMountainsStatisicalAddonsCtrl::CMountainsStatisicalAddonsCtrlFactory::UpdateRegistry(BOOL bRegister)
+BOOL CMountainsStatisticalAddonsCtrl::CMountainsStatisticalAddonsCtrlFactory::UpdateRegistry(BOOL bRegister)
 {
 	// TODO: Verify that your control follows apartment-model threading rules.
 	// Refer to MFC TechNote 64 for more information.
@@ -78,10 +78,10 @@ BOOL CMountainsStatisicalAddonsCtrl::CMountainsStatisicalAddonsCtrlFactory::Upda
 			AfxGetInstanceHandle(),
 			m_clsid,
 			m_lpszProgID,
-			IDS_MOUNTAINSSTATISICALADDONS,
-			IDB_MOUNTAINSSTATISICALADDONS,
+			IDS_MOUNTAINSSTATISTICALADDONS,
+			IDB_MOUNTAINSSTATISTICALADDONS,
 			afxRegApartmentThreading,
-			_dwMountainsStatisicalAddonsOleMisc,
+			_dwMountainsStatisticalAddonsOleMisc,
 			_tlid,
 			_wVerMajor,
 			_wVerMinor);
@@ -98,7 +98,7 @@ static const WCHAR _szLicString[] = L"MIT License";
 // CMountainsStatisicalAddonsCtrl::CMountainsStatisicalAddonsCtrlFactory::VerifyUserLicense -
 // Checks for existence of a user license
 
-BOOL CMountainsStatisicalAddonsCtrl::CMountainsStatisicalAddonsCtrlFactory::VerifyUserLicense()
+BOOL CMountainsStatisticalAddonsCtrl::CMountainsStatisticalAddonsCtrlFactory::VerifyUserLicense()
 {
 	return AfxVerifyLicFile(AfxGetInstanceHandle(), _szLicFileName,
 		_szLicString);
@@ -107,7 +107,7 @@ BOOL CMountainsStatisicalAddonsCtrl::CMountainsStatisicalAddonsCtrlFactory::Veri
 // CMountainsStatisicalAddonsCtrl::CMountainsStatisicalAddonsCtrlFactory::GetLicenseKey -
 // Returns a runtime licensing key
 
-BOOL CMountainsStatisicalAddonsCtrl::CMountainsStatisicalAddonsCtrlFactory::GetLicenseKey(DWORD dwReserved,
+BOOL CMountainsStatisticalAddonsCtrl::CMountainsStatisticalAddonsCtrlFactory::GetLicenseKey(DWORD dwReserved,
 	BSTR *pbstrKey)
 {
 	if (pbstrKey == nullptr)
@@ -120,7 +120,7 @@ BOOL CMountainsStatisicalAddonsCtrl::CMountainsStatisicalAddonsCtrlFactory::GetL
 
 // CMountainsStatisicalAddonsCtrl::CMountainsStatisicalAddonsCtrl - Constructor
 
-CMountainsStatisicalAddonsCtrl::CMountainsStatisicalAddonsCtrl()
+CMountainsStatisticalAddonsCtrl::CMountainsStatisticalAddonsCtrl()
 {
 	InitializeIIDs(&IID_DMountainsStatisicalAddons, &IID_DMountainsStatisicalAddonsEvents);
 	// TODO: Initialize your control's instance data here.
@@ -128,14 +128,14 @@ CMountainsStatisicalAddonsCtrl::CMountainsStatisicalAddonsCtrl()
 
 // CMountainsStatisicalAddonsCtrl::~CMountainsStatisicalAddonsCtrl - Destructor
 
-CMountainsStatisicalAddonsCtrl::~CMountainsStatisicalAddonsCtrl()
+CMountainsStatisticalAddonsCtrl::~CMountainsStatisticalAddonsCtrl()
 {
 	// TODO: Cleanup your control's instance data here.
 }
 
 // CMountainsStatisicalAddonsCtrl::OnDraw - Drawing function
 
-void CMountainsStatisicalAddonsCtrl::OnDraw(
+void CMountainsStatisticalAddonsCtrl::OnDraw(
 			CDC* pdc, const CRect& rcBounds, const CRect& /* rcInvalid */)
 {
 	if (!pdc)
@@ -148,7 +148,7 @@ void CMountainsStatisicalAddonsCtrl::OnDraw(
 
 // CMountainsStatisicalAddonsCtrl::DoPropExchange - Persistence support
 
-void CMountainsStatisicalAddonsCtrl::DoPropExchange(CPropExchange* pPX)
+void CMountainsStatisticalAddonsCtrl::DoPropExchange(CPropExchange* pPX)
 {
 	ExchangeVersion(pPX, MAKELONG(_wVerMinor, _wVerMajor));
 	COleControl::DoPropExchange(pPX);
@@ -159,7 +159,7 @@ void CMountainsStatisicalAddonsCtrl::DoPropExchange(CPropExchange* pPX)
 
 // CMountainsStatisicalAddonsCtrl::OnResetState - Reset control to default state
 
-void CMountainsStatisicalAddonsCtrl::OnResetState()
+void CMountainsStatisticalAddonsCtrl::OnResetState()
 {
 	COleControl::OnResetState();  // Resets defaults found in DoPropExchange
 
@@ -169,9 +169,9 @@ void CMountainsStatisicalAddonsCtrl::OnResetState()
 
 // CMountainsStatisicalAddonsCtrl::AboutBox - Display an "About" box to the user
 
-void CMountainsStatisicalAddonsCtrl::AboutBox()
+void CMountainsStatisticalAddonsCtrl::AboutBox()
 {
-	CDialogEx dlgAbout(IDD_ABOUTBOX_MOUNTAINSSTATISICALADDONS);
+	CDialogEx dlgAbout(IDD_ABOUTBOX_MOUNTAINSSTATISTICALADDONS);
 	dlgAbout.DoModal();
 }
 

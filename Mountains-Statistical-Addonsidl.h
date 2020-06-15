@@ -6,9 +6,9 @@
  /* File created by MIDL compiler version 8.01.0622 */
 /* at Mon Jan 18 22:14:07 2038
  */
-/* Compiler settings for MountainsStatisicalAddons.idl:
-    Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 8.01.0622 
-    protocol : dce , ms_ext, c_ext, robust
+/* Compiler settings for MountainsStatisticalAddons.idl:
+    Oicf, W1, Zp8, env=Win64 (32b run), target_arch=AMD64 8.01.0622 
+    protocol : all , ms_ext, c_ext, robust
     error checks: allocation ref bounds_check enum stub_data 
     VC __declspec() decoration level: 
          __declspec(uuid()), __declspec(selectany), __declspec(novtable)
@@ -31,8 +31,8 @@
 #endif /* __RPCNDR_H_VERSION__ */
 
 
-#ifndef __Mountains2DStatisical2DAddonsidl_h__
-#define __Mountains2DStatisical2DAddonsidl_h__
+#ifndef __Mountains2DStatistical2DAddonsidl_h__
+#define __Mountains2DStatistical2DAddonsidl_h__
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
@@ -40,30 +40,30 @@
 
 /* Forward Declarations */ 
 
-#ifndef ___DMountainsStatisicalAddons_FWD_DEFINED__
-#define ___DMountainsStatisicalAddons_FWD_DEFINED__
-typedef interface _DMountainsStatisicalAddons _DMountainsStatisicalAddons;
+#ifndef ___DMOUNTAINSSTATISTICALADDONS_FWD_DEFINED__
+#define ___DMOUNTAINSSTATISTICALADDONS_FWD_DEFINED__
+typedef interface _DMOUNTAINSSTATISTICALADDONS _DMOUNTAINSSTATISTICALADDONS;
 
-#endif 	/* ___DMountainsStatisicalAddons_FWD_DEFINED__ */
-
-
-#ifndef ___DMountainsStatisicalAddonsEvents_FWD_DEFINED__
-#define ___DMountainsStatisicalAddonsEvents_FWD_DEFINED__
-typedef interface _DMountainsStatisicalAddonsEvents _DMountainsStatisicalAddonsEvents;
-
-#endif 	/* ___DMountainsStatisicalAddonsEvents_FWD_DEFINED__ */
+#endif 	/* ___DMOUNTAINSSTATISTICALADDONS_FWD_DEFINED__ */
 
 
-#ifndef __MountainsStatisicalAddons_FWD_DEFINED__
-#define __MountainsStatisicalAddons_FWD_DEFINED__
+#ifndef ___DMOUNTAINSSTATISTICALADDONSEvents_FWD_DEFINED__
+#define ___DMOUNTAINSSTATISTICALADDONSEvents_FWD_DEFINED__
+typedef interface _DMOUNTAINSSTATISTICALADDONSEvents _DMOUNTAINSSTATISTICALADDONSEvents;
+
+#endif 	/* ___DMOUNTAINSSTATISTICALADDONSEvents_FWD_DEFINED__ */
+
+
+#ifndef __MOUNTAINSSTATISTICALADDONS_FWD_DEFINED__
+#define __MOUNTAINSSTATISTICALADDONS_FWD_DEFINED__
 
 #ifdef __cplusplus
-typedef class MountainsStatisicalAddons MountainsStatisicalAddons;
+typedef class MOUNTAINSSTATISTICALADDONS MOUNTAINSSTATISTICALADDONS;
 #else
-typedef struct MountainsStatisicalAddons MountainsStatisicalAddons;
+typedef struct MOUNTAINSSTATISTICALADDONS MOUNTAINSSTATISTICALADDONS;
 #endif /* __cplusplus */
 
-#endif 	/* __MountainsStatisicalAddons_FWD_DEFINED__ */
+#endif 	/* __MOUNTAINSSTATISTICALADDONS_FWD_DEFINED__ */
 
 
 #ifdef __cplusplus
@@ -71,7 +71,7 @@ extern "C"{
 #endif 
 
 
-/* interface __MIDL_itf_MountainsStatisicalAddons_0000_0000 */
+/* interface __MIDL_itf_MountainsStatisticalAddons_0000_0000 */
 /* [local] */ 
 
 #pragma warning(push)
@@ -86,65 +86,65 @@ extern "C"{
 #pragma endregion
 
 
-extern RPC_IF_HANDLE __MIDL_itf_MountainsStatisicalAddons_0000_0000_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_MountainsStatisicalAddons_0000_0000_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_MountainsStatisticalAddons_0000_0000_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_MountainsStatisticalAddons_0000_0000_v0_0_s_ifspec;
 
 
-#ifndef __MountainsStatisicalAddonsLib_LIBRARY_DEFINED__
-#define __MountainsStatisicalAddonsLib_LIBRARY_DEFINED__
+#ifndef __MOUNTAINSSTATISTICALADDONSLib_LIBRARY_DEFINED__
+#define __MOUNTAINSSTATISTICALADDONSLib_LIBRARY_DEFINED__
 
-/* library MountainsStatisicalAddonsLib */
+/* library MOUNTAINSSTATISTICALADDONSLib */
 /* [control][version][uuid] */ 
 
 
-EXTERN_C const IID LIBID_MountainsStatisicalAddonsLib;
+EXTERN_C const IID LIBID_MOUNTAINSSTATISTICALADDONSLib;
 
-#ifndef ___DMountainsStatisicalAddons_DISPINTERFACE_DEFINED__
-#define ___DMountainsStatisicalAddons_DISPINTERFACE_DEFINED__
+#ifndef ___DMOUNTAINSSTATISTICALADDONS_DISPINTERFACE_DEFINED__
+#define ___DMOUNTAINSSTATISTICALADDONS_DISPINTERFACE_DEFINED__
 
-/* dispinterface _DMountainsStatisicalAddons */
+/* dispinterface _DMOUNTAINSSTATISTICALADDONS */
 /* [uuid] */ 
 
 
-EXTERN_C const IID DIID__DMountainsStatisicalAddons;
+EXTERN_C const IID DIID__DMOUNTAINSSTATISTICALADDONS;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
     MIDL_INTERFACE("c8d88fe4-1860-4add-88dc-393a78677722")
-    _DMountainsStatisicalAddons : public IDispatch
+    _DMOUNTAINSSTATISTICALADDONS : public IDispatch
     {
     };
     
 #else 	/* C style interface */
 
-    typedef struct _DMountainsStatisicalAddonsVtbl
+    typedef struct _DMOUNTAINSSTATISTICALADDONSVtbl
     {
         BEGIN_INTERFACE
         
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            _DMountainsStatisicalAddons * This,
+            _DMOUNTAINSSTATISTICALADDONS * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            _DMountainsStatisicalAddons * This);
+            _DMOUNTAINSSTATISTICALADDONS * This);
         
         ULONG ( STDMETHODCALLTYPE *Release )( 
-            _DMountainsStatisicalAddons * This);
+            _DMOUNTAINSSTATISTICALADDONS * This);
         
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            _DMountainsStatisicalAddons * This,
+            _DMOUNTAINSSTATISTICALADDONS * This,
             /* [out] */ UINT *pctinfo);
         
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            _DMountainsStatisicalAddons * This,
+            _DMOUNTAINSSTATISTICALADDONS * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ ITypeInfo **ppTInfo);
         
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            _DMountainsStatisicalAddons * This,
+            _DMOUNTAINSSTATISTICALADDONS * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
             /* [range][in] */ UINT cNames,
@@ -152,7 +152,7 @@ EXTERN_C const IID DIID__DMountainsStatisicalAddons;
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            _DMountainsStatisicalAddons * This,
+            _DMOUNTAINSSTATISTICALADDONS * This,
             /* [annotation][in] */ 
             _In_  DISPID dispIdMember,
             /* [annotation][in] */ 
@@ -171,11 +171,11 @@ EXTERN_C const IID DIID__DMountainsStatisicalAddons;
             _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
-    } _DMountainsStatisicalAddonsVtbl;
+    } _DMOUNTAINSSTATISTICALADDONSVtbl;
 
-    interface _DMountainsStatisicalAddons
+    interface _DMOUNTAINSSTATISTICALADDONS
     {
-        CONST_VTBL struct _DMountainsStatisicalAddonsVtbl *lpVtbl;
+        CONST_VTBL struct _DMOUNTAINSSTATISTICALADDONSVtbl *lpVtbl;
     };
 
     
@@ -183,26 +183,26 @@ EXTERN_C const IID DIID__DMountainsStatisicalAddons;
 #ifdef COBJMACROS
 
 
-#define _DMountainsStatisicalAddons_QueryInterface(This,riid,ppvObject)	\
+#define _DMOUNTAINSSTATISTICALADDONS_QueryInterface(This,riid,ppvObject)	\
     ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define _DMountainsStatisicalAddons_AddRef(This)	\
+#define _DMOUNTAINSSTATISTICALADDONS_AddRef(This)	\
     ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define _DMountainsStatisicalAddons_Release(This)	\
+#define _DMOUNTAINSSTATISTICALADDONS_Release(This)	\
     ( (This)->lpVtbl -> Release(This) ) 
 
 
-#define _DMountainsStatisicalAddons_GetTypeInfoCount(This,pctinfo)	\
+#define _DMOUNTAINSSTATISTICALADDONS_GetTypeInfoCount(This,pctinfo)	\
     ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
-#define _DMountainsStatisicalAddons_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
+#define _DMOUNTAINSSTATISTICALADDONS_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
     ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
-#define _DMountainsStatisicalAddons_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
+#define _DMOUNTAINSSTATISTICALADDONS_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
     ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
-#define _DMountainsStatisicalAddons_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
+#define _DMOUNTAINSSTATISTICALADDONS_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
     ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
@@ -211,55 +211,55 @@ EXTERN_C const IID DIID__DMountainsStatisicalAddons;
 #endif 	/* C style interface */
 
 
-#endif 	/* ___DMountainsStatisicalAddons_DISPINTERFACE_DEFINED__ */
+#endif 	/* ___DMOUNTAINSSTATISTICALADDONS_DISPINTERFACE_DEFINED__ */
 
 
-#ifndef ___DMountainsStatisicalAddonsEvents_DISPINTERFACE_DEFINED__
-#define ___DMountainsStatisicalAddonsEvents_DISPINTERFACE_DEFINED__
+#ifndef ___DMOUNTAINSSTATISTICALADDONSEvents_DISPINTERFACE_DEFINED__
+#define ___DMOUNTAINSSTATISTICALADDONSEvents_DISPINTERFACE_DEFINED__
 
-/* dispinterface _DMountainsStatisicalAddonsEvents */
+/* dispinterface _DMOUNTAINSSTATISTICALADDONSEvents */
 /* [uuid] */ 
 
 
-EXTERN_C const IID DIID__DMountainsStatisicalAddonsEvents;
+EXTERN_C const IID DIID__DMOUNTAINSSTATISTICALADDONSEvents;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 
     MIDL_INTERFACE("0a210d0d-2836-499f-b91a-3cc8e60b35e0")
-    _DMountainsStatisicalAddonsEvents : public IDispatch
+    _DMOUNTAINSSTATISTICALADDONSEvents : public IDispatch
     {
     };
     
 #else 	/* C style interface */
 
-    typedef struct _DMountainsStatisicalAddonsEventsVtbl
+    typedef struct _DMOUNTAINSSTATISTICALADDONSEventsVtbl
     {
         BEGIN_INTERFACE
         
         HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-            _DMountainsStatisicalAddonsEvents * This,
+            _DMOUNTAINSSTATISTICALADDONSEvents * This,
             /* [in] */ REFIID riid,
             /* [annotation][iid_is][out] */ 
             _COM_Outptr_  void **ppvObject);
         
         ULONG ( STDMETHODCALLTYPE *AddRef )( 
-            _DMountainsStatisicalAddonsEvents * This);
+            _DMOUNTAINSSTATISTICALADDONSEvents * This);
         
         ULONG ( STDMETHODCALLTYPE *Release )( 
-            _DMountainsStatisicalAddonsEvents * This);
+            _DMOUNTAINSSTATISTICALADDONSEvents * This);
         
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfoCount )( 
-            _DMountainsStatisicalAddonsEvents * This,
+            _DMOUNTAINSSTATISTICALADDONSEvents * This,
             /* [out] */ UINT *pctinfo);
         
         HRESULT ( STDMETHODCALLTYPE *GetTypeInfo )( 
-            _DMountainsStatisicalAddonsEvents * This,
+            _DMOUNTAINSSTATISTICALADDONSEvents * This,
             /* [in] */ UINT iTInfo,
             /* [in] */ LCID lcid,
             /* [out] */ ITypeInfo **ppTInfo);
         
         HRESULT ( STDMETHODCALLTYPE *GetIDsOfNames )( 
-            _DMountainsStatisicalAddonsEvents * This,
+            _DMOUNTAINSSTATISTICALADDONSEvents * This,
             /* [in] */ REFIID riid,
             /* [size_is][in] */ LPOLESTR *rgszNames,
             /* [range][in] */ UINT cNames,
@@ -267,7 +267,7 @@ EXTERN_C const IID DIID__DMountainsStatisicalAddonsEvents;
             /* [size_is][out] */ DISPID *rgDispId);
         
         /* [local] */ HRESULT ( STDMETHODCALLTYPE *Invoke )( 
-            _DMountainsStatisicalAddonsEvents * This,
+            _DMOUNTAINSSTATISTICALADDONSEvents * This,
             /* [annotation][in] */ 
             _In_  DISPID dispIdMember,
             /* [annotation][in] */ 
@@ -286,11 +286,11 @@ EXTERN_C const IID DIID__DMountainsStatisicalAddonsEvents;
             _Out_opt_  UINT *puArgErr);
         
         END_INTERFACE
-    } _DMountainsStatisicalAddonsEventsVtbl;
+    } _DMOUNTAINSSTATISTICALADDONSEventsVtbl;
 
-    interface _DMountainsStatisicalAddonsEvents
+    interface _DMOUNTAINSSTATISTICALADDONSEvents
     {
-        CONST_VTBL struct _DMountainsStatisicalAddonsEventsVtbl *lpVtbl;
+        CONST_VTBL struct _DMOUNTAINSSTATISTICALADDONSEventsVtbl *lpVtbl;
     };
 
     
@@ -298,26 +298,26 @@ EXTERN_C const IID DIID__DMountainsStatisicalAddonsEvents;
 #ifdef COBJMACROS
 
 
-#define _DMountainsStatisicalAddonsEvents_QueryInterface(This,riid,ppvObject)	\
+#define _DMOUNTAINSSTATISTICALADDONSEvents_QueryInterface(This,riid,ppvObject)	\
     ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define _DMountainsStatisicalAddonsEvents_AddRef(This)	\
+#define _DMOUNTAINSSTATISTICALADDONSEvents_AddRef(This)	\
     ( (This)->lpVtbl -> AddRef(This) ) 
 
-#define _DMountainsStatisicalAddonsEvents_Release(This)	\
+#define _DMOUNTAINSSTATISTICALADDONSEvents_Release(This)	\
     ( (This)->lpVtbl -> Release(This) ) 
 
 
-#define _DMountainsStatisicalAddonsEvents_GetTypeInfoCount(This,pctinfo)	\
+#define _DMOUNTAINSSTATISTICALADDONSEvents_GetTypeInfoCount(This,pctinfo)	\
     ( (This)->lpVtbl -> GetTypeInfoCount(This,pctinfo) ) 
 
-#define _DMountainsStatisicalAddonsEvents_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
+#define _DMOUNTAINSSTATISTICALADDONSEvents_GetTypeInfo(This,iTInfo,lcid,ppTInfo)	\
     ( (This)->lpVtbl -> GetTypeInfo(This,iTInfo,lcid,ppTInfo) ) 
 
-#define _DMountainsStatisicalAddonsEvents_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
+#define _DMOUNTAINSSTATISTICALADDONSEvents_GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId)	\
     ( (This)->lpVtbl -> GetIDsOfNames(This,riid,rgszNames,cNames,lcid,rgDispId) ) 
 
-#define _DMountainsStatisicalAddonsEvents_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
+#define _DMOUNTAINSSTATISTICALADDONSEvents_Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr)	\
     ( (This)->lpVtbl -> Invoke(This,dispIdMember,riid,lcid,wFlags,pDispParams,pVarResult,pExcepInfo,puArgErr) ) 
 
 #endif /* COBJMACROS */
@@ -326,17 +326,17 @@ EXTERN_C const IID DIID__DMountainsStatisicalAddonsEvents;
 #endif 	/* C style interface */
 
 
-#endif 	/* ___DMountainsStatisicalAddonsEvents_DISPINTERFACE_DEFINED__ */
+#endif 	/* ___DMOUNTAINSSTATISTICALADDONSEvents_DISPINTERFACE_DEFINED__ */
 
 
-EXTERN_C const CLSID CLSID_MountainsStatisicalAddons;
+EXTERN_C const CLSID CLSID_MOUNTAINSSTATISTICALADDONS;
 
 #ifdef __cplusplus
 
 class DECLSPEC_UUID("1b777728-f285-4da8-81af-0777f97b6d51")
-MountainsStatisicalAddons;
+MOUNTAINSSTATISTICALADDONS;
 #endif
-#endif /* __MountainsStatisicalAddonsLib_LIBRARY_DEFINED__ */
+#endif /* __MOUNTAINSSTATISTICALADDONSLib_LIBRARY_DEFINED__ */
 
 /* Additional Prototypes for ALL interfaces */
 

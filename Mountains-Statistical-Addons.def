@@ -1,4 +1,4 @@
-; Mountains-Statisical-Addons.def : Declares the module parameters.
+; Mountains-Statistical-Addons.def : Declares the module parameters.
 
 EXPORTS
 	DllCanUnloadNow     PRIVATE

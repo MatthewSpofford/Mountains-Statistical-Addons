@@ -1,6 +1,6 @@
 #pragma once
 
-// Mountains-Statisical-Addons.h : main header file for Mountains-Statisical-Addons.DLL
+// Mountains-Statistical-Addons.h : main header file for Mountains-Statistical-Addons.DLL
 
 #if !defined( __AFXCTL_H__ )
 #error "include 'afxctl.h' before including this file"
@@ -9,7 +9,7 @@
 #include "resource.h"       // main symbols
 
 
-// CMountainsStatisicalAddonsApp : See Mountains-Statisical-Addons.cpp for implementation.
+// CMountainsStatisicalAddonsApp : See Mountains-Statistical-Addons.cpp for implementation.
 
 class CMountainsStatisicalAddonsApp : public COleControlModule
 {

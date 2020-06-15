@@ -15,13 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Mountains-Statisical-Addons.cpp">
+    <ClCompile Include="Mountains-Statistical-Addons.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MountainsStatisicalAddonsCtrl.cpp">
+    <ClCompile Include="MountainsStatisticalAddonsCtrl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MountainsStatisicalAddonsPropPage.cpp">
+    <ClCompile Include="MountainsStatisticalAddonsPropPage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
@@ -29,7 +29,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Mountains-Statisical-Addons.h">
+    <ClInclude Include="Mountains-Statistical-Addons.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="framework.h">
@@ -41,10 +41,10 @@
     <ClInclude Include="Resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MountainsStatisicalAddonsCtrl.h">
+    <ClInclude Include="MountainsStatisticalAddonsCtrl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MountainsStatisicalAddonsPropPage.h">
+    <ClInclude Include="MountainsStatisticalAddonsPropPage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="pch.h">
@@ -52,26 +52,26 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Mountains-Statisical-Addons.def">
+    <None Include="Mountains-Statistical-Addons.def">
       <Filter>Source Files</Filter>
     </None>
-    <None Include="Mountains-Statisical-Addons.lic" />
+    <None Include="Mountains-Statistical-Addons.lic" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Mountains-Statisical-Addons.rc">
+    <ResourceCompile Include="Mountains-Statistical-Addons.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="MountainsStatisicalAddons.idl">
+    <Midl Include="MountainsStatisticalAddons.idl">
       <Filter>Source Files</Filter>
     </Midl>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="MountainsStatisicalAddonsCtrl.bmp">
+    <Image Include="MountainsStatisticalAddonsCtrl.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="Mountains-Statisical-Addons.ico">
+    <Image Include="Mountains-Statistical-Addons.ico">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
