@@ -12,13 +12,12 @@
 CMountainsStatisicalAddonsApp theApp;
 
 const GUID CDECL _tlid = {0x647044bd,0xdec7,0x4ec2,{0xb7,0x86,0x78,0x71,0xa1,0xf6,0xd6,0x31}};
-const WORD _wVerMajor = 1;
-const WORD _wVerMinor = 0;
+const WORD _wVerMajor = 0;
+const WORD _wVerMinor = 1;
 
 
 
 // CMountainsStatisicalAddonsApp::InitInstance - DLL initialization
-
 BOOL CMountainsStatisicalAddonsApp::InitInstance()
 {
 	BOOL bInit = COleControlModule::InitInstance();
@@ -32,9 +31,7 @@ BOOL CMountainsStatisicalAddonsApp::InitInstance()
 }
 
 
-
 // CMountainsStatisicalAddonsApp::ExitInstance - DLL termination
-
 int CMountainsStatisicalAddonsApp::ExitInstance()
 {
 	// TODO: Add your own module termination code here.
@@ -45,7 +42,6 @@ int CMountainsStatisicalAddonsApp::ExitInstance()
 
 
 // DllRegisterServer - Adds entries to the system registry
-
 STDAPI DllRegisterServer(void)
 {
 	AFX_MANAGE_STATE(_afxModuleAddrThis);
@@ -62,7 +58,6 @@ STDAPI DllRegisterServer(void)
 
 
 // DllUnregisterServer - Removes entries from the system registry
-
 STDAPI DllUnregisterServer(void)
 {
 	AFX_MANAGE_STATE(_afxModuleAddrThis);

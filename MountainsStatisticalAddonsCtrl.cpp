@@ -86,13 +86,11 @@ BOOL CMountainsStatisticalAddonsCtrl::CMountainsStatisticalAddonsCtrlFactory::Up
 
 
 // Licensing strings
-
 static const TCHAR _szLicFileName[] = _T("LICENSE");
 static const WCHAR _szLicString[] = L"MIT License";
 
 // CMountainsStatisicalAddonsCtrl::CMountainsStatisicalAddonsCtrlFactory::VerifyUserLicense -
 // Checks for existence of a user license
-
 BOOL CMountainsStatisticalAddonsCtrl::CMountainsStatisticalAddonsCtrlFactory::VerifyUserLicense()
 {
 	return AfxVerifyLicFile(AfxGetInstanceHandle(), _szLicFileName,
@@ -101,7 +99,6 @@ BOOL CMountainsStatisticalAddonsCtrl::CMountainsStatisticalAddonsCtrlFactory::Ve
 
 // CMountainsStatisicalAddonsCtrl::CMountainsStatisicalAddonsCtrlFactory::GetLicenseKey -
 // Returns a runtime licensing key
-
 BOOL CMountainsStatisticalAddonsCtrl::CMountainsStatisticalAddonsCtrlFactory::GetLicenseKey(DWORD dwReserved,
 	BSTR *pbstrKey)
 {
@@ -115,10 +112,11 @@ BOOL CMountainsStatisticalAddonsCtrl::CMountainsStatisticalAddonsCtrlFactory::Ge
 
 // CMountainsStatisicalAddonsCtrl::CMountainsStatisicalAddonsCtrl - Constructor
 
-CMountainsStatisticalAddonsCtrl::CMountainsStatisticalAddonsCtrl()
-{
+CMountainsStatisticalAddonsCtrl::CMountainsStatisticalAddonsCtrl() {
 	InitializeIIDs(&IID_DMountainsStatisicalAddons, &IID_DMountainsStatisicalAddonsEvents);
-	// TODO: Initialize your control's instance data here.
+	unitSystem = 1;
+	spy.CreateInstance(__uuidof(SpyTools));
+	spy->WriteText("ADDON: Statisitcal addon initialized");
 }
 
 // CMountainsStatisicalAddonsCtrl::~CMountainsStatisicalAddonsCtrl - Destructor
@@ -129,20 +127,21 @@ CMountainsStatisticalAddonsCtrl::~CMountainsStatisticalAddonsCtrl()
 }
 
 // CMountainsStatisicalAddonsCtrl::OnDraw - Drawing function
-
 void CMountainsStatisticalAddonsCtrl::OnDraw(
 			CDC* pdc, const CRect& rcBounds, const CRect& /* rcInvalid */)
 {
 	if (!pdc)
 		return;
 
-	// TODO: Replace the following code with your own drawing code.
+	int nSavedDC = pdc->SaveDC();
+
 	pdc->FillRect(rcBounds, CBrush::FromHandle((HBRUSH)GetStockObject(WHITE_BRUSH)));
 	pdc->Ellipse(rcBounds);
+
+	pdc->RestoreDC(nSavedDC);
 }
 
 // CMountainsStatisicalAddonsCtrl::DoPropExchange - Persistence support
-
 void CMountainsStatisticalAddonsCtrl::DoPropExchange(CPropExchange* pPX)
 {
 	ExchangeVersion(pPX, MAKELONG(_wVerMinor, _wVerMajor));
@@ -151,9 +150,17 @@ void CMountainsStatisticalAddonsCtrl::DoPropExchange(CPropExchange* pPX)
 	// TODO: Call PX_ functions for each persistent custom property.
 }
 
+// CPythonActiveXStudyCtrl::GetControlFlags -
+// Used to configure MFC ActiveX control behaviour
+DWORD CMountainsStatisticalAddonsCtrl::GetControlFlags() {
+	DWORD dwFlags = COleControl::GetControlFlags();
+
+	dwFlags |= noFlickerActivate;
+
+	return dwFlags;
+}
 
 // CMountainsStatisicalAddonsCtrl::OnResetState - Reset control to default state
-
 void CMountainsStatisticalAddonsCtrl::OnResetState()
 {
 	COleControl::OnResetState();  // Resets defaults found in DoPropExchange
