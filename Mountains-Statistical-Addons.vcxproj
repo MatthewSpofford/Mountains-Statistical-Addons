@@ -154,7 +154,7 @@
     </ResourceCompile>
     <PostBuildEvent>
       <Message>Copying Runtime License</Message>
-      <Command>copy "Mountains-Statistical-Addons.lic" "$(OutDir)"</Command>
+      <Command>copy "LICENSE" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

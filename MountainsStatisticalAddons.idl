@@ -11,41 +11,41 @@
   control ]
 library MOUNTAINSSTATISTICALADDONSLib
 {
-	importlib(STDOLE_TLB);
+    importlib(STDOLE_TLB);
 
-	//  Primary dispatch interface for CMOUNTAINSSTATISTICALADDONSCtrl
-	[ 
-		uuid(c8d88fe4-1860-4add-88dc-393a78677722)
-	]
-	dispinterface _DMOUNTAINSSTATISTICALADDONS
-	{
-		properties:
-		methods:
+    //  Primary dispatch interface for CMOUNTAINSSTATISTICALADDONSCtrl
+    [ 
+        uuid(c8d88fe4-1860-4add-88dc-393a78677722)
+    ]
+    dispinterface _DMOUNTAINSSTATISTICALADDONS
+    {
+        properties:
+        methods:
 
-			[id(DISPID_ABOUTBOX)] void AboutBox();
-	};
+            [id(DISPID_ABOUTBOX)] void AboutBox();
+    };
 
-	//  Event dispatch interface for CMOUNTAINSSTATISTICALADDONSCtrl
+    //  Event dispatch interface for CMOUNTAINSSTATISTICALADDONSCtrl
 
-	[ 
-		uuid(0a210d0d-2836-499f-b91a-3cc8e60b35e0)
-	]
-	dispinterface _DMOUNTAINSSTATISTICALADDONSEvents
-	{
-		properties:
-			//  Event interface has no properties
+    [ 
+        uuid(0a210d0d-2836-499f-b91a-3cc8e60b35e0)
+    ]
+    dispinterface _DMOUNTAINSSTATISTICALADDONSEvents
+    {
+        properties:
+            //  Event interface has no properties
 
-		methods:
-	};
+        methods:
+    };
 
-	//  Class information for CMOUNTAINSSTATISTICALADDONSCtrl
-	[
-		uuid(1b777728-f285-4da8-81af-0777f97b6d51), licensed
-	]
-	coclass MOUNTAINSSTATISTICALADDONS
-	{
-		[default] dispinterface _DMOUNTAINSSTATISTICALADDONS;
-		[default, source] dispinterface _DMOUNTAINSSTATISTICALADDONSEvents;
-	};
+    //  Class information for CMOUNTAINSSTATISTICALADDONSCtrl
+    [
+        uuid(1b777728-f285-4da8-81af-0777f97b6d51), licensed
+    ]
+    coclass MOUNTAINSSTATISTICALADDONS
+    {
+        [default] dispinterface _DMOUNTAINSSTATISTICALADDONS;
+        [default, source] dispinterface _DMOUNTAINSSTATISTICALADDONSEvents;
+    };
 
 };

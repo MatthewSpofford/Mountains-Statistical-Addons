@@ -11,8 +11,8 @@
 class CMountainsStatisicalAddonsApp : public COleControlModule
 {
 public:
-	BOOL InitInstance();
-	int ExitInstance();
+    BOOL InitInstance();
+    int ExitInstance();
 };
 
 extern const GUID CDECL _tlid;
