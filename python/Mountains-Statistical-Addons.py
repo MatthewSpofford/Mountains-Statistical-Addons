@@ -62,11 +62,6 @@ class version_infos :
     comment = "More information can be found at the software's GitHub page."
     support = 'https://github.com/MatthewSpofford/Mountains-Statistical-Addons'
 
-def CreateAddon() -> StatisticalAddonStudies :
-    """Creates the F-test study addon to be used by mountains"""
-    return StatisticalAddonStudies()
-
-
 class StatisticalAddonStudies :
     """Container for Study (Reserve) object"""
     def __init__(self) :
@@ -102,7 +97,7 @@ class StatisticalAddonStudies :
 
 
     def OnButtonClick(self, sId, bChecked, reservectl):
-        """OnButtonClick is called when a user clic on a button on the contextual study tab of the ribbon
+        """OnButtonClick is called when a user click on a button on the contextual study tab of the ribbon
         sId : identifiant of the button clicked
         bChecked : button state : checked or not
     
@@ -139,3 +134,7 @@ class StatisticalAddonStudies :
         bEnable, bChecked, bActiveOnMultiSelection = reservectl.OnUpdateButton(sId)
     
         return True, bEnable, bChecked, bActiveOnMultiSelection
+
+def CreateAddon() -> StatisticalAddonStudies :
+    """Creates the F-test study addon to be used by mountains"""
+    return StatisticalAddonStudies()
