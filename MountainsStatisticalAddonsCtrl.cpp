@@ -1,11 +1,7 @@
-// MountainsStatisticalAddonsCtrl.cpp : Implementation of the CMountainsStatisicalAddonsCtrl ActiveX Control class.
-
 #include "pch.h"
-#include "framework.h"
-#include "Mountains-Statistical-Addons.h"
+#include "MountainsStatisticalAddons.h"
 #include "MountainsStatisticalAddonsCtrl.h"
 #include "MountainsStatisticalAddonsPropPage.h"
-#include "afxdialogex.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -127,13 +123,13 @@ CMountainsStatisticalAddonsCtrl::~CMountainsStatisticalAddonsCtrl()
 }
 
 // CMountainsStatisicalAddonsCtrl::OnDraw - Drawing function
-void CMountainsStatisticalAddonsCtrl::OnDraw(
-			CDC* pdc, const CRect& rcBounds, const CRect& /* rcInvalid */)
+void CMountainsStatisticalAddonsCtrl::OnDraw(CDC* pdc, const CRect& rcBounds, const CRect& /* rcInvalid */)
 {
 	if (!pdc)
 		return;
 
 	int nSavedDC = pdc->SaveDC();
+
 
 	pdc->FillRect(rcBounds, CBrush::FromHandle((HBRUSH)GetStockObject(WHITE_BRUSH)));
 	pdc->Ellipse(rcBounds);

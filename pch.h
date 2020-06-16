@@ -7,7 +7,17 @@
 #ifndef PCH_H
 #define PCH_H
 
-// add headers that you want to pre-compile here
 #include "framework.h"
+
+// import the Mountains COM interfaces
+#pragma warning (push)
+#pragma warning (disable : 4192)
+#pragma warning (push)
+#pragma warning (disable : 26812)
+#import "libid:65BC4ADE-251B-4B4C-8EA5-CFB75162D5EE" version("3.0")
+#pragma warning (pop)
+#pragma warning (pop)
+
+#include "afxdialogex.h"
 
 #endif //PCH_H

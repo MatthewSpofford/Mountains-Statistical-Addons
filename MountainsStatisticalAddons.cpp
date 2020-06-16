@@ -1,8 +1,7 @@
 // Mountains-Statistical-Addons.cpp : Implementation of CMountainsStatisicalAddonsApp and DLL registration.
 
 #include "pch.h"
-#include "framework.h"
-#include "Mountains-Statistical-Addons.h"
+#include "MountainsStatisticalAddons.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -14,7 +13,6 @@ CMountainsStatisicalAddonsApp theApp;
 const GUID CDECL _tlid = {0x647044bd,0xdec7,0x4ec2,{0xb7,0x86,0x78,0x71,0xa1,0xf6,0xd6,0x31}};
 const WORD _wVerMajor = 0;
 const WORD _wVerMinor = 1;
-
 
 
 // CMountainsStatisicalAddonsApp::InitInstance - DLL initialization

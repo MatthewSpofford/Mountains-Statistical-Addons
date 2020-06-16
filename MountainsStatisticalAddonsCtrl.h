@@ -1,9 +1,6 @@
 #pragma once
 
-//#pragma warning (disable : 4192)
-// import the Mountains COM interfaces
-#import "libid:65BC4ADE-251B-4B4C-8EA5-CFB75162D5EE" version("3.0")
-//#pragma warning (default : 4192)
+#include "pch.h"
 
 // Mountains COM interfaces are in the namespace mountainsLib
 using namespace mountainsLib;

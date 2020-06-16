@@ -228,7 +228,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Mountains-Statistical-Addons.cpp" />
+    <ClCompile Include="MountainsStatisticalAddons.cpp" />
     <ClCompile Include="MountainsStatisticalAddonsCtrl.cpp" />
     <ClCompile Include="MountainsStatisticalAddonsPropPage.cpp" />
     <ClCompile Include="pch.cpp">
@@ -240,7 +240,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
-    <ClInclude Include="Mountains-Statistical-Addons.h" />
+    <ClInclude Include="MountainsStatisticalAddons.h" />
     <ClInclude Include="MountainsStatisticalAddonsCtrl.h" />
     <ClInclude Include="MountainsStatisticalAddonsPropPage.h" />
     <ClInclude Include="pch.h" />

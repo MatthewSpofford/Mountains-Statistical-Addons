@@ -1,8 +1,7 @@
 // MountainsStatisticalAddonsPropPage.cpp : Implementation of the CMountainsStatisticalAddonsPropPage property page class.
 
 #include "pch.h"
-#include "framework.h"
-#include "Mountains-Statistical-Addons.h"
+#include "MountainsStatisticalAddons.h"
 #include "MountainsStatisticalAddonsPropPage.h"
 
 #ifdef _DEBUG

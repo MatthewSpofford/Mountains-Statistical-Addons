@@ -8,9 +8,6 @@
 
 #include "resource.h"       // main symbols
 
-
-// CMountainsStatisicalAddonsApp : See Mountains-Statistical-Addons.cpp for implementation.
-
 class CMountainsStatisicalAddonsApp : public COleControlModule
 {
 public:

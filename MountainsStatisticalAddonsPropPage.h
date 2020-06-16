@@ -1,10 +1,6 @@
 #pragma once
 
 // MountainsStatisticalAddonsPropPage.h : Declaration of the CMountainsStatisticalAddonsPropPage property page class.
-
-
-// CMountainsStatisticalAddonsPropPage : See MountainsStatisticalAddonsPropPage.cpp for implementation.
-
 class CMountainsStatisticalAddonsPropPage : public COlePropertyPage
 {
 	DECLARE_DYNCREATE(CMountainsStatisticalAddonsPropPage)
