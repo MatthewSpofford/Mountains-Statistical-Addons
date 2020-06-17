@@ -97,6 +97,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)/resources;$(ProjectDir)/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -109,7 +110,7 @@
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ValidateAllParameters>true</ValidateAllParameters>
       <TypeLibraryName>$(IntDir)Mountains-Statistical-Addons.tlb</TypeLibraryName>
-      <HeaderFileName>$(ProjectName)idl.h</HeaderFileName>
+      <HeaderFileName>build\$(ProjectName)idl.h</HeaderFileName>
     </Midl>
     <ResourceCompile>
       <Culture>0x0409</Culture>
@@ -118,7 +119,7 @@
     </ResourceCompile>
     <PostBuildEvent>
       <Message>Copying Runtime License</Message>
-      <Command>copy "Mountains-Statistical-Addons.lic" "$(OutDir)"</Command>
+      <Command>copy "LICENSE" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -133,10 +134,11 @@
       <Optimization>Disabled</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <AdditionalIncludeDirectories>$(ProjectDir)/resources;$(ProjectDir)/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <ModuleDefinitionFile>.\Mountains-Statistical-Addons.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>.\build\Mountains-Statistical-Addons.def</ModuleDefinitionFile>
       <OutputFile>$(OutDir)$(ProjectName).ocx</OutputFile>
       <RegisterOutput>true</RegisterOutput>
     </Link>
@@ -145,7 +147,7 @@
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ValidateAllParameters>true</ValidateAllParameters>
       <TypeLibraryName>$(IntDir)Mountains-Statistical-Addons.tlb</TypeLibraryName>
-      <HeaderFileName>$(ProjectName)idl.h</HeaderFileName>
+      <HeaderFileName>build\$(ProjectName)idl.h</HeaderFileName>
     </Midl>
     <ResourceCompile>
       <Culture>0x0409</Culture>
@@ -166,6 +168,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)/resources;$(ProjectDir)/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -180,7 +183,7 @@
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ValidateAllParameters>true</ValidateAllParameters>
       <TypeLibraryName>$(IntDir)Mountains-Statistical-Addons.tlb</TypeLibraryName>
-      <HeaderFileName>$(ProjectName)idl.h</HeaderFileName>
+      <HeaderFileName>build\$(ProjectName)idl.h</HeaderFileName>
     </Midl>
     <ResourceCompile>
       <Culture>0x0409</Culture>
@@ -189,7 +192,7 @@
     </ResourceCompile>
     <PostBuildEvent>
       <Message>Copying Runtime License</Message>
-      <Command>copy "Mountains-Statistical-Addons.lic" "$(OutDir)"</Command>
+      <Command>copy "LICENSE" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -201,6 +204,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_WINDOWS;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)/resources;$(ProjectDir)/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -215,7 +219,7 @@
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ValidateAllParameters>true</ValidateAllParameters>
       <TypeLibraryName>$(IntDir)Mountains-Statistical-Addons.tlb</TypeLibraryName>
-      <HeaderFileName>$(ProjectName)idl.h</HeaderFileName>
+      <HeaderFileName>build\$(ProjectName)idl.h</HeaderFileName>
     </Midl>
     <ResourceCompile>
       <Culture>0x0409</Culture>
@@ -224,14 +228,14 @@
     </ResourceCompile>
     <PostBuildEvent>
       <Message>Copying Runtime License</Message>
-      <Command>copy "Mountains-Statistical-Addons.lic" "$(OutDir)"</Command>
+      <Command>copy "LICENSE" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="MountainsStatisticalAddons.cpp" />
-    <ClCompile Include="MountainsStatisticalAddonsCtrl.cpp" />
-    <ClCompile Include="MountainsStatisticalAddonsPropPage.cpp" />
-    <ClCompile Include="pch.cpp">
+    <ClCompile Include="src\MountainsStatisticalAddons.cpp" />
+    <ClCompile Include="src\controller\MountainsStatisticalAddonsCtrl.cpp" />
+    <ClCompile Include="src\MountainsStatisticalAddonsPropPage.cpp" />
+    <ClCompile Include="src\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -239,27 +243,28 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AddonDispatchID.h" />
-    <ClInclude Include="framework.h" />
-    <ClInclude Include="StatisticalAddonApp.h" />
-    <ClInclude Include="MountainsStatisticalAddonsCtrl.h" />
-    <ClInclude Include="MountainsStatisticalAddonsPropPage.h" />
-    <ClInclude Include="pch.h" />
-    <ClInclude Include="Resource.h" />
-    <ClInclude Include="targetver.h" />
+    <ClInclude Include="src\AddonDispatchID.h" />
+    <ClInclude Include="src\StatisticalAddonApp.h" />
+    <ClInclude Include="src\controller\MountainsStatisticalAddonsCtrl.h" />
+    <ClInclude Include="src\MountainsStatisticalAddonsPropPage.h" />
+    <ClInclude Include="src\pch.h" />
+    <ClInclude Include="resources\Resource.h" />
+    <ClInclude Include="src\targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Mountains-Statistical-Addons.def" />
+    <None Include="build\Mountains-Statistical-Addons.def" />
+    <None Include="python\Mountains-Statistical-Addons.py" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Mountains-Statistical-Addons.rc" />
+    <ResourceCompile Include="resources\Mountains-Statistical-Addons.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="MountainsStatisticalAddons.idl" />
+    <Midl Include="build\MountainsStatisticalAddons.idl" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Mountains-Statistical-Addons.ico" />
-    <Image Include="MountainsStatisticalAddonsCtrl.bmp" />
+    <Image Include="resources\Mountains-Statistical-Addons.ico" />
+    <Image Include="resources\MountainsStatisticalAddonsCtrl.bmp" />
+    <Image Include="python\Mountains-Statistical-Addons.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

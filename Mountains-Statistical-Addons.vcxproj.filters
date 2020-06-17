@@ -15,65 +15,68 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MountainsStatisticalAddonsCtrl.cpp">
+    <ClCompile Include="src\controller\MountainsStatisticalAddonsCtrl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MountainsStatisticalAddonsPropPage.cpp">
+    <ClCompile Include="src\MountainsStatisticalAddonsPropPage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="pch.cpp">
+    <ClCompile Include="src\pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MountainsStatisticalAddons.cpp">
+    <ClCompile Include="src\MountainsStatisticalAddons.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h">
+    <ClInclude Include="src\targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="targetver.h">
+    <ClInclude Include="resources\Resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Resource.h">
+    <ClInclude Include="src\controller\MountainsStatisticalAddonsCtrl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MountainsStatisticalAddonsCtrl.h">
+    <ClInclude Include="src\MountainsStatisticalAddonsPropPage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MountainsStatisticalAddonsPropPage.h">
+    <ClInclude Include="src\pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="pch.h">
+    <ClInclude Include="src\AddonDispatchID.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AddonDispatchID.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="StatisticalAddonApp.h">
+    <ClInclude Include="src\StatisticalAddonApp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Mountains-Statistical-Addons.def">
+    <None Include="build\Mountains-Statistical-Addons.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="python\Mountains-Statistical-Addons.py">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Mountains-Statistical-Addons.rc">
+    <ResourceCompile Include="resources\Mountains-Statistical-Addons.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="MountainsStatisticalAddons.idl">
+    <Midl Include="build\MountainsStatisticalAddons.idl">
       <Filter>Source Files</Filter>
     </Midl>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="MountainsStatisticalAddonsCtrl.bmp">
+    <Image Include="resources\MountainsStatisticalAddonsCtrl.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="Mountains-Statistical-Addons.ico">
+    <Image Include="resources\Mountains-Statistical-Addons.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="python\Mountains-Statistical-Addons.ico">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "pch.h"
+#include "../pch.h"
 
 // Mountains COM interfaces are in the namespace mountainsLib
 using namespace mountainsLib;

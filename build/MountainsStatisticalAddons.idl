@@ -6,7 +6,7 @@
 
 #include <olectl.h>
 #include <idispids.h>
-#include "AddonDispatchID.h"
+#include "../src/AddonDispatchID.h"
 
 [ uuid(647044bd-dec7-4ec2-b786-7871a1f6d631), version(1.0),
   control, lcid(0) ]

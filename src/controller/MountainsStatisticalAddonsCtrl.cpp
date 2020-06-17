@@ -1,9 +1,9 @@
 #include "pch.h"
-#include "MountainsStatisticalAddons.h"
 #include "MountainsStatisticalAddonsCtrl.h"
-#include "MountainsStatisticalAddonsPropPage.h"
 
-#include "AddonDispatchID.h"
+#include "../MountainsStatisticalAddons.h"
+#include "../MountainsStatisticalAddonsPropPage.h"
+#include "../AddonDispatchID.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW

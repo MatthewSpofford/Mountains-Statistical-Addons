@@ -28,9 +28,8 @@ win32com.client.gencache.EnsureModule(addonTypeLibID, 0, VERSION_MAJOR, VERSION_
 # Defines the type as a Study (Reserve)
 type = constants.kAddonReserve
 # Name of study and various langauges
-publicname = {constants.kDefaultLanguage : "Statistical Addon",
-              constants.kLangEnglish : "Statistical Addon",
-              constants.kLangFrench : "Module statistique"}
+publicname = {constants.kDefaultLanguage : "Multiscale statistics",
+              constants.kLangFrench : "Statistiques multi-échelles"}
 # The type of studiable accepted as input
 input_type = { constants.kDSStudiableProfile,
 			   constants.kDSStudiableSurface }

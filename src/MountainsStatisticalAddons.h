@@ -6,7 +6,7 @@
 #error "include 'afxctl.h' before including this file"
 #endif
 
-#include "resource.h"       // main symbols
+#include "../resources/Resource.h"       // main symbols
 
 class CMountainsStatisicalAddonsApp : public COleControlModule
 {
