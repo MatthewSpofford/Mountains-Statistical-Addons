@@ -27,6 +27,9 @@
     <ClCompile Include="src\MountainsStatisticalAddons.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AddonEntity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\targetver.h">
@@ -47,7 +50,10 @@
     <ClInclude Include="src\AddonDispatchID.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\StatisticalAddonApp.h">
+    <ClInclude Include="src\MountainsStatisticalAddons.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AddonEntity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

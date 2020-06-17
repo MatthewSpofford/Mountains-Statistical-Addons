@@ -35,7 +35,7 @@ input_type = { constants.kDSStudiableProfile,
 			   constants.kDSStudiableSurface }
 
 # Icon location
-icon_path = "Mountains-Statistical-Addons.ico"
+icon_path = "Multiscale-Statistics-Icon.ico"
 
 # Class to define group on ribbon tab
 class group_infos(object):
@@ -61,7 +61,7 @@ class version_infos :
     comment = "More information can be found at the software's GitHub page."
     support = 'https://github.com/MatthewSpofford/Mountains-Statistical-Addons'
 
-class StatisticalAddonStudies :
+class StatisticalAddon :
     """Container for Study (Reserve) object"""
     def __init__(self) :
         return
@@ -122,6 +122,6 @@ class StatisticalAddonStudies :
     
         return True, bEnable, bChecked, bActiveOnMultiSelection
 
-def CreateAddon() -> StatisticalAddonStudies :
+def CreateAddon() -> StatisticalAddon :
     """Creates the F-test study addon to be used by mountains"""
-    return StatisticalAddonStudies()
+    return StatisticalAddon()

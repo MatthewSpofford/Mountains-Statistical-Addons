@@ -5,6 +5,8 @@
 #include "../MountainsStatisticalAddonsPropPage.h"
 #include "../AddonDispatchID.h"
 
+#include "../AddonEntity.h"
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -30,8 +32,6 @@ BEGIN_EVENT_MAP(CMountainsStatisticalAddonsCtrl, COleControl)
 END_EVENT_MAP()
 
 // Property pages
-
-// TODO: Add more property pages as needed.  Remember to increase the count!
 BEGIN_PROPPAGEIDS(CMountainsStatisticalAddonsCtrl, 1)
     PROPPAGEID(CMountainsStatisticalAddonsPropPage::guid)
 END_PROPPAGEIDS(CMountainsStatisticalAddonsCtrl)
@@ -167,7 +167,6 @@ void CMountainsStatisticalAddonsCtrl::OnResetState()
 
 
 // CMountainsStatisicalAddonsCtrl::AboutBox - Display an "About" box to the user
-
 void CMountainsStatisticalAddonsCtrl::AboutBox()
 {
     CDialogEx dlgAbout(IDD_ABOUTBOX_MOUNTAINSSTATISTICALADDONS);
@@ -182,9 +181,10 @@ void CMountainsStatisticalAddonsCtrl::OnInit(
 
     AFX_MANAGE_STATE(AfxGetStaticModuleState());
 
-    this->mountains = dispMountains;
-    this->studiables = studiables;
-    this->paramHandler = parameterHandler;
+    AddonEntity& addon = AddonEntity::getInstance();
+    addon.setMountains(dispMountains);
+    addon.setStudiables(studiables);
+    addon.setParamHandler(parameterHandler);
 }
 
 void CMountainsStatisticalAddonsCtrl::OnButtonClick(LPCTSTR id, BOOL ehecked, BOOL* modified) {

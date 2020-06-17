@@ -27,17 +27,6 @@ protected:
         CString unit;
     };
 
-    // input surface studiable displayed in the control
-    IMatrixStudiablePtr studiables;
-
-    // interface used to notify Mountains with the results calculated by the reserve
-    IAddonParameterHandlerPtr paramHandler;
-
-    // interface used to access to Mountains functionalities
-    IMountainsPtr mountains;
-
-    // generated bitmap of the surface displayed
-    CBitmap matrixRendering;
 
     // local array of the parameters calculated
     CArray<TParam> paramArray;

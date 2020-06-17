@@ -232,6 +232,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AddonEntity.cpp" />
     <ClCompile Include="src\MountainsStatisticalAddons.cpp" />
     <ClCompile Include="src\controller\MountainsStatisticalAddonsCtrl.cpp" />
     <ClCompile Include="src\MountainsStatisticalAddonsPropPage.cpp" />
@@ -243,8 +244,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AddonEntity.h" />
     <ClInclude Include="src\AddonDispatchID.h" />
-    <ClInclude Include="src\StatisticalAddonApp.h" />
+    <ClInclude Include="src\MountainsStatisticalAddons.h" />
     <ClInclude Include="src\controller\MountainsStatisticalAddonsCtrl.h" />
     <ClInclude Include="src\MountainsStatisticalAddonsPropPage.h" />
     <ClInclude Include="src\pch.h" />
