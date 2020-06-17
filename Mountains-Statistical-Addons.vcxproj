@@ -239,8 +239,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AddonDispatchID.h" />
     <ClInclude Include="framework.h" />
-    <ClInclude Include="MountainsStatisticalAddons.h" />
+    <ClInclude Include="StatisticalAddonApp.h" />
     <ClInclude Include="MountainsStatisticalAddonsCtrl.h" />
     <ClInclude Include="MountainsStatisticalAddonsPropPage.h" />
     <ClInclude Include="pch.h" />
@@ -249,7 +250,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Mountains-Statistical-Addons.def" />
-    <None Include="Mountains-Statistical-Addons.lic" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Mountains-Statistical-Addons.rc" />

@@ -44,7 +44,7 @@ protected:
 
     // 0: metric system
     // 1: inch system
-    short unitSystem;
+    short unitSystem = 1;
 
     // Diagnostic system
     ISpyToolsPtr spy;
@@ -76,9 +76,5 @@ protected:
 // Event maps
     DECLARE_EVENT_MAP()
 
-// Dispatch and event IDs
-public:
-    enum {
-    };
 };
 

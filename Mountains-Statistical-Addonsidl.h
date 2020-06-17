@@ -84,20 +84,21 @@ extern "C"{
 #pragma warning(pop)
 #pragma region Desktop Family
 #pragma endregion
+#pragma once
 
 
 extern RPC_IF_HANDLE __MIDL_itf_MountainsStatisticalAddons_0000_0000_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_MountainsStatisticalAddons_0000_0000_v0_0_s_ifspec;
 
 
-#ifndef __MOUNTAINSSTATISTICALADDONSLib_LIBRARY_DEFINED__
-#define __MOUNTAINSSTATISTICALADDONSLib_LIBRARY_DEFINED__
+#ifndef __Mountains_Statistical_Addons_Lib_LIBRARY_DEFINED__
+#define __Mountains_Statistical_Addons_Lib_LIBRARY_DEFINED__
 
-/* library MOUNTAINSSTATISTICALADDONSLib */
-/* [control][version][uuid] */ 
+/* library Mountains_Statistical_Addons_Lib */
+/* [lcid][control][version][uuid] */ 
 
 
-EXTERN_C const IID LIBID_MOUNTAINSSTATISTICALADDONSLib;
+EXTERN_C const IID LIBID_Mountains_Statistical_Addons_Lib;
 
 #ifndef ___DMOUNTAINSSTATISTICALADDONS_DISPINTERFACE_DEFINED__
 #define ___DMOUNTAINSSTATISTICALADDONS_DISPINTERFACE_DEFINED__
@@ -336,7 +337,7 @@ EXTERN_C const CLSID CLSID_MOUNTAINSSTATISTICALADDONS;
 class DECLSPEC_UUID("1b777728-f285-4da8-81af-0777f97b6d51")
 MOUNTAINSSTATISTICALADDONS;
 #endif
-#endif /* __MOUNTAINSSTATISTICALADDONSLib_LIBRARY_DEFINED__ */
+#endif /* __Mountains_Statistical_Addons_Lib_LIBRARY_DEFINED__ */
 
 /* Additional Prototypes for ALL interfaces */
 

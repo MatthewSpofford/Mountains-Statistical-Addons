@@ -21,9 +21,9 @@ VERSION_MAJOR = 0
 VERSION_MINOR = 1
 VERSON_SUB = 0
 
-# Force the generation of the ActiveX control Python wrappers (python classes which encapsulate the COM interfaces)
-ActiveXStudyLIBID = '{F2F3E7EE-FEC0-4593-BDA8-62F0CF14EF4B}'
-win32com.client.gencache.EnsureModule(ActiveXStudyLIBID, VERSION_MAJOR, VERSION_MINOR, 0, None, None, False, True)
+# Force the generation of the ActiveX control Python wrappers used by the addon
+addonTypeLibID = '{647044BD-DEC7-4EC2-B786-7871A1F6D631}'
+win32com.client.gencache.EnsureModule(addonTypeLibID, 0, VERSION_MAJOR, VERSION_MINOR, None, None, False, True)
 
 # Defines the type as a Study (Reserve)
 type = constants.kAddonReserve
@@ -53,7 +53,7 @@ class button_infos(object):
 
 class version_infos :
     """Addon descirption information"""
-    version = '0.1.0'
+    version = str(VERSION_MAJOR) + "." + str(VERSION_MINOR) + "." + str(VERSON_SUB) 
     company = "Worcester Polytechnic Institute, USA"
   
     description = { constants.kDefaultLanguage : "Statistical addon to be run on a given surface.",
@@ -78,19 +78,7 @@ class StatisticalAddonStudies :
                 reservectl) -> bool :
         """The method is called each time the studiable used as a source for the study is updated."""
         
-        
-        print("reservectl = ", reservectl)
-        print( dir(reservectl) )
-
-        print("paramhandler = ", paramhandler)
-
-        # mntctrl = mountains.control
-
-        print("UnitSytem = ", reservectl.UnitSystem)
-
         reservectl.UnitSystem = 1
-        print("UnitSytem = ", reservectl.UnitSystem)
-
         # forwards the message to a custom method of the ActiveX control
         reservectl.OnInit(mountains.control, studiable, paramhandler)
         return True

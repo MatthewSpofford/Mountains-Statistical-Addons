@@ -6,10 +6,11 @@
 
 #include <olectl.h>
 #include <idispids.h>
+#include "AddonDispatchID.h"
 
 [ uuid(647044bd-dec7-4ec2-b786-7871a1f6d631), version(1.0),
-  control ]
-library MOUNTAINSSTATISTICALADDONSLib
+  control, lcid(0) ]
+library Mountains_Statistical_Addons_Lib
 {
     importlib(STDOLE_TLB);
 
@@ -20,9 +21,22 @@ library MOUNTAINSSTATISTICALADDONSLib
     dispinterface _DMOUNTAINSSTATISTICALADDONS
     {
         properties:
+            [id(DISPID_UNITSYSTEM) , helpstring("unit system property")]
+            SHORT UnitSystem;
+
         methods:
 
-            [id(DISPID_ABOUTBOX)] void AboutBox();
+            [id(DISPID_ABOUTBOX)]
+            void AboutBox();
+
+            [id(DISPID_ONINIT)]
+            void OnInit([in] IDispatch* mountains, [in] IDispatch* studiable, [in] IDispatch* parameterHandler);
+
+            [id(DISPID_ONBUTTONCLICK)]
+            void OnButtonClick([in] BSTR strID, [in] VARIANT_BOOL checked, [out] VARIANT_BOOL* modified);
+
+            [id(DISPID_ONUPDATEBUTTON)]
+            void OnUpdateButton([in] BSTR strID, [out] VARIANT_BOOL* enable, [out] VARIANT_BOOL* checked, [out] VARIANT_BOOL* activeOnMultiSelection);
     };
 
     //  Event dispatch interface for CMOUNTAINSSTATISTICALADDONSCtrl

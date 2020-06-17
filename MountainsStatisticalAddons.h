@@ -15,7 +15,7 @@ public:
     int ExitInstance();
 };
 
-extern const GUID CDECL _tlid;
-extern const WORD _wVerMajor;
-extern const WORD _wVerMinor;
+extern const GUID CDECL TLID;
+extern const WORD VERSION_MAJOR;
+extern const WORD VERSION_MINOR;
 

@@ -47,7 +47,10 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MountainsStatisticalAddons.h">
+    <ClInclude Include="AddonDispatchID.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StatisticalAddonApp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -55,7 +58,6 @@
     <None Include="Mountains-Statistical-Addons.def">
       <Filter>Source Files</Filter>
     </None>
-    <None Include="Mountains-Statistical-Addons.lic" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Mountains-Statistical-Addons.rc">

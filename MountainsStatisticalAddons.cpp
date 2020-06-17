@@ -10,9 +10,9 @@
 
 CMountainsStatisicalAddonsApp theApp;
 
-const GUID CDECL _tlid = {0x647044bd,0xdec7,0x4ec2,{0xb7,0x86,0x78,0x71,0xa1,0xf6,0xd6,0x31}};
-const WORD _wVerMajor = 0;
-const WORD _wVerMinor = 1;
+const GUID CDECL TLID = {0x647044bd,0xdec7,0x4ec2,{0xb7,0x86,0x78,0x71,0xa1,0xf6,0xd6,0x31}};
+const WORD VERSION_MAJOR = 0;
+const WORD VERSION_MINOR = 1;
 
 
 // CMountainsStatisicalAddonsApp::InitInstance - DLL initialization
@@ -44,7 +44,7 @@ STDAPI DllRegisterServer(void)
 {
     AFX_MANAGE_STATE(_afxModuleAddrThis);
 
-    if (!AfxOleRegisterTypeLib(AfxGetInstanceHandle(), _tlid))
+    if (!AfxOleRegisterTypeLib(AfxGetInstanceHandle(), TLID))
         return ResultFromScode(SELFREG_E_TYPELIB);
 
     if (!COleObjectFactoryEx::UpdateRegistryAll(TRUE))
@@ -60,7 +60,7 @@ STDAPI DllUnregisterServer(void)
 {
     AFX_MANAGE_STATE(_afxModuleAddrThis);
 
-    if (!AfxOleUnregisterTypeLib(_tlid, _wVerMajor, _wVerMinor))
+    if (!AfxOleUnregisterTypeLib(TLID, VERSION_MAJOR, VERSION_MINOR))
         return ResultFromScode(SELFREG_E_TYPELIB);
 
     if (!COleObjectFactoryEx::UpdateRegistryAll(FALSE))

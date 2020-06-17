@@ -3,6 +3,8 @@
 #include "MountainsStatisticalAddonsCtrl.h"
 #include "MountainsStatisticalAddonsPropPage.h"
 
+#include "AddonDispatchID.h"
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -17,10 +19,10 @@ END_MESSAGE_MAP()
 // Dispatch map
 BEGIN_DISPATCH_MAP(CMountainsStatisticalAddonsCtrl, COleControl)
     DISP_FUNCTION_ID(CMountainsStatisticalAddonsCtrl, "AboutBox", DISPID_ABOUTBOX, AboutBox, VT_EMPTY, VTS_NONE)
-    DISP_FUNCTION_ID(CMountainsStatisticalAddonsCtrl, "OnInit", 1, OnInit, VT_EMPTY, VTS_DISPATCH VTS_DISPATCH VTS_DISPATCH)
-    DISP_PROPERTY_EX_ID(CMountainsStatisticalAddonsCtrl, "UnitSystem", 2, GetUnitSystem, SetUnitSystem, VT_I2)
-    DISP_FUNCTION_ID(CMountainsStatisticalAddonsCtrl, "OnButtonClick", 3, OnButtonClick, VT_EMPTY, VTS_BSTR VTS_BOOL VTS_PBOOL)
-    DISP_FUNCTION_ID(CMountainsStatisticalAddonsCtrl, "OnUpdateButton", 4, OnUpdateButton, VT_EMPTY, VTS_BSTR VTS_PBOOL VTS_PBOOL VTS_PBOOL)
+    DISP_FUNCTION_ID(CMountainsStatisticalAddonsCtrl, "OnInit", DISPID_ONINIT, OnInit, VT_EMPTY, VTS_DISPATCH VTS_DISPATCH VTS_DISPATCH)
+    DISP_PROPERTY_EX_ID(CMountainsStatisticalAddonsCtrl, "UnitSystem", DISPID_UNITSYSTEM, GetUnitSystem, SetUnitSystem, VT_I2)
+    DISP_FUNCTION_ID(CMountainsStatisticalAddonsCtrl, "OnButtonClick", DISPID_ONBUTTONCLICK, OnButtonClick, VT_EMPTY, VTS_BSTR VTS_BOOL VTS_PBOOL)
+    DISP_FUNCTION_ID(CMountainsStatisticalAddonsCtrl, "OnUpdateButton", DISPID_ONUPDATEBUTTON, OnUpdateButton, VT_EMPTY, VTS_BSTR VTS_PBOOL VTS_PBOOL VTS_PBOOL)
 END_DISPATCH_MAP()
 
 // Event map
@@ -39,7 +41,7 @@ IMPLEMENT_OLECREATE_EX(CMountainsStatisticalAddonsCtrl, "MFCACTIVEXCONTRO.Mounta
     0x1b777728,0xf285,0x4da8,0x81,0xaf,0x07,0x77,0xf9,0x7b,0x6d,0x51)
 
 // Type library ID and version
-IMPLEMENT_OLETYPELIB(CMountainsStatisticalAddonsCtrl, _tlid, _wVerMajor, _wVerMinor)
+IMPLEMENT_OLETYPELIB(CMountainsStatisticalAddonsCtrl, TLID, VERSION_MAJOR, VERSION_MINOR)
 
 // Interface IDs
 const IID IID_DMountainsStatisicalAddons = {0xc8d88fe4,0x1860,0x4add,{0x88,0xdc,0x39,0x3a,0x78,0x67,0x77,0x22}};
@@ -73,9 +75,9 @@ BOOL CMountainsStatisticalAddonsCtrl::CMountainsStatisticalAddonsCtrlFactory::Up
             IDB_MOUNTAINSSTATISTICALADDONS,
             afxRegApartmentThreading,
             _dwMountainsStatisticalAddonsOleMisc,
-            _tlid,
-            _wVerMajor,
-            _wVerMinor);
+            TLID,
+            VERSION_MAJOR,
+            VERSION_MINOR);
     else
         return AfxOleUnregisterClass(m_clsid, m_lpszProgID);
 }
@@ -110,7 +112,6 @@ BOOL CMountainsStatisticalAddonsCtrl::CMountainsStatisticalAddonsCtrlFactory::Ge
 
 CMountainsStatisticalAddonsCtrl::CMountainsStatisticalAddonsCtrl() {
     InitializeIIDs(&IID_DMountainsStatisicalAddons, &IID_DMountainsStatisicalAddonsEvents);
-    unitSystem = 1;
     spy.CreateInstance(__uuidof(SpyTools));
     spy->WriteText("ADDON: Statisitcal addon initialized");
 }
@@ -140,7 +141,7 @@ void CMountainsStatisticalAddonsCtrl::OnDraw(CDC* pdc, const CRect& rcBounds, co
 // CMountainsStatisicalAddonsCtrl::DoPropExchange - Persistence support
 void CMountainsStatisticalAddonsCtrl::DoPropExchange(CPropExchange* pPX)
 {
-    ExchangeVersion(pPX, MAKELONG(_wVerMinor, _wVerMajor));
+    ExchangeVersion(pPX, MAKELONG(VERSION_MINOR, VERSION_MAJOR));
     COleControl::DoPropExchange(pPX);
 
     // TODO: Call PX_ functions for each persistent custom property.
