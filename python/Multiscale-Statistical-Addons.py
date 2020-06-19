@@ -31,8 +31,8 @@ type = constants.kAddonReserve
 publicname = {constants.kDefaultLanguage : "Multiscale statistics",
               constants.kLangFrench : "Statistiques multi-échelles"}
 # The type of studiable accepted as input
-input_type = { constants.kDSStudiableProfile,
-			   constants.kDSStudiableSurface }
+input_type = { constants.kDSStudiableSeriesOfProfiles,
+			   constants.kDSStudiableSeriesOfSurfaces }
 
 # Icon location
 icon_path = "Multiscale-Statistics-Icon.ico"

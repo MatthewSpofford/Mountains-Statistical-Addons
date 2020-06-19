@@ -5,7 +5,7 @@
 #include "../MountainsStatisticalAddonsPropPage.h"
 #include "../AddonDispatchID.h"
 
-#include "../AddonEntity.h"
+#include "../AddonStorage.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -130,8 +130,7 @@ void CMountainsStatisticalAddonsCtrl::OnDraw(CDC* pdc, const CRect& rcBounds, co
         return;
 
     int nSavedDC = pdc->SaveDC();
-
-
+	
     pdc->FillRect(rcBounds, CBrush::FromHandle((HBRUSH)GetStockObject(WHITE_BRUSH)));
     pdc->Ellipse(rcBounds);
 
@@ -181,7 +180,7 @@ void CMountainsStatisticalAddonsCtrl::OnInit(
 
     AFX_MANAGE_STATE(AfxGetStaticModuleState());
 
-    AddonEntity& addon = AddonEntity::getInstance();
+    AddonStorage& addon = AddonStorage::getInstance();
     addon.setMountains(dispMountains);
     addon.setStudiables(studiables);
     addon.setParamHandler(parameterHandler);

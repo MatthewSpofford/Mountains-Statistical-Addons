@@ -7,15 +7,14 @@ using namespace mountainsLib;
 
 /**
  * Singleton storage class of Mountains Statistical Study Addon.
- * Handles the 
  */
-class AddonEntity
+class AddonStorage
 {	
 public:
-    AddonEntity(AddonEntity const&) = delete;       // Constructor is not needed
-    void operator=(AddonEntity const&) = delete;    // Object cannot be assigned
+    AddonStorage(AddonStorage const&) = delete;       // Constructor is not needed
+    void operator=(AddonStorage const&) = delete;    // Object cannot be assigned
     
-    static AddonEntity& getInstance();
+    static AddonStorage& getInstance();
 
 
 	IMatrixStudiablePtr getStudiables();
@@ -28,7 +27,7 @@ public:
     void setMountains(IMountainsPtr mountains);
 	
 private:
-    AddonEntity() {}
+    AddonStorage() {}
 
     /**
      * Input surface studiable displayed in the control.
